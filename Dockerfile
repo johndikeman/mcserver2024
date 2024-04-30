@@ -8,6 +8,8 @@ WORKDIR /app
 
 RUN echo "eula=true" > eula.txt  # Create eula.txt with EULA agreement
 
+COPY eula.txt /app
+
 ADD https://storage.googleapis.com/dikeman-mc-patched/mce_server_patched.zip /app
 
 RUN unzip -q mce_server_patched.zip
